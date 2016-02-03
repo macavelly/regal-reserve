@@ -2,6 +2,7 @@
 <link rel="import" href="../bower_components/paper-tabs/paper-tabs.html">
 <link rel="import" href="../bower_components/iron-pages/iron-pages.html">
 <link rel="import" href="../bower_components/paper-styles/typography.html">
+<link rel="import" href="rate-table.html">
 
 <dom-module id="rate-reserve">
 
@@ -11,9 +12,9 @@
             color: #fff;
             --paper-font-common-base: Roboto;
         }
-        iron-pages {
-            background-color: #BDBDBD;
-        }
+        /*iron-pages {*/
+            /*background-color: #BDBDBD;*/
+        /*}*/
     </style>
 
     <template>
@@ -24,7 +25,7 @@
         </paper-tabs>
 
         <iron-pages selected="{{selected}}">
-            <div>Page 1</div>
+            <div><rate-table></rate-table></div>
             <div>Page 2</div>
             <div>Page 3</div>
         </iron-pages>

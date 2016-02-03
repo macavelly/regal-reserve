@@ -1,42 +1,265 @@
-<style is="custom-style">
-    #notes {
-        @apply(--layout-vertical);
-        @apply(--layout-wrap);
-        height: 344px;
-        width: 384px;
-    }
+<link rel="import"  href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/paper-styles/typography.html">
 
-    #notes > paper-card {
-        box-sizing: border-box;
-        max-width: 184px;
-        margin: 4px;
-        flex: 0 0 auto;
-    }
-</style>
-<div id="notes">
-    <paper-card heading="Call Jennifer" class="cyan">
-        <div class="card-actions">
-            <paper-icon-button icon="communication:call" style="color:white;"></paper-icon-button>
-            <span>March 19, 2017</span>
-        </div>
-    </paper-card>
-    <paper-card class="dark">
-        <div class="card-content">
-            <p>Groceries:</p>
-            <paper-checkbox>almond milk</paper-checkbox>
-            <paper-checkbox>coconut water</paper-checkbox>
-            <paper-checkbox>cheese</paper-checkbox>
-            <paper-checkbox>green apples</paper-checkbox>
-        </div>
-        <div class="card-actions">
-            <paper-icon-button icon="communication:location-on" style="color:white"></paper-icon-button>
-            <span>Campbell</span>
-        </div>
-    </paper-card>
-    <paper-card heading="clean desk" class="lime"></paper-card>
-    <paper-card image="./donuts.png" class="amber">
-        <div class="card-content">New cafe opened on Valencia St.</div>
-    </paper-card>
-    <paper-card heading="Yuna tickets on sale 6/24" class="cyan">
-    </paper-card>
-</div>
+
+<dom-module id="rate-table">
+
+    <style>
+
+        :host{
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            border-bottom-color: gray;
+            border-top-width: 1px;
+            border-top-style: solid;
+            border-top-color: gray;
+            width: 600px;
+            margin-bottom: 1em;
+            padding: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: Roboto;
+        }
+        #class1 {
+            color: #9E1029;
+        }
+
+
+
+
+    </style>
+
+    <template>
+
+        <p align="center" style="font-weight: normal;"><strong>New York City Base Rates</strong></p>
+        <table style="border-color: #817e7e; border-style: solid;" align="center" border="1">
+            <tbody>
+            <tr style="background-color: #b2b1b3;" lang="undefined">
+                <td style="background-color: #ffffff;" width="194">
+                    <p align="center"><strong><span style="text-decoration: underline;">&nbsp;To/From Manhattan</span></strong></p>
+                </td>
+                <td width="74">
+                    <p align="center"><strong>&nbsp;<i><a target="_self" id="class1">Economy <br>Class</a></i></strong></p>
+                </td>
+                <td width="76">
+                    <p align="center"><strong><i><a target="_self" id="class1">Executive <br>Class&nbsp;</a></i></strong></p>
+                </td>
+                <td width="69">
+                    <p align="center"><strong><i><a target="_self" ><span style="text-align: center;"><span style="text-align: center;"><strong><i></i></strong></span></span></a><strong><i>*<a target="_self" id="class1">SUV <br> Class</a></i></strong><i><a target="_self" href="http://www.regalcar.com/regalfleet.html?fleettabs=2">&nbsp;</a></i><strong></strong></i><strong></strong></strong></p>
+                    <strong> </strong></td>
+                <td align="left" width="67" valign="middle">
+                    <p style="text-align: center;"><strong><i><a target="_self" id="class1">Luxury <br> Class</a></i></strong><i><a target="_self" >&nbsp;</a></i></p>
+                </td>
+                <td style="background-color: #ffffff; text-align: center;" width="82" valign="middle"><strong>Go To<br>Reservation<br>Page</strong></td>
+            </tr>
+            <tr>
+                <td style="background-color: #f1f1f1;">
+                    <p align="center"><strong><img title="" width="29" height="16" border="0" alt="" src="image/40425487.png">&nbsp;La Guardia</strong></p>
+                </td>
+                <td>
+                    <p align="center">&nbsp;$50</p>
+                </td>
+                <td>
+                    <p align="center">$60&nbsp;</p>
+                </td>
+                <td>
+                    <p align="center">$100</p>
+                </td>
+                <td style="text-align: center;" valign="top">$170</td>
+                <td style="text-align: center;" valign="top"><a target="_self" href="http://www.regalcar.com/onlinereservations.html?restabs=2"><img title="" width="26" height="26" border="0" alt="" src="image/40425977.png"></a></td>
+            </tr>
+            <tr>
+                <td style="background-color: #f1f1f1;">
+                    <p align="center"><img title="" width="29" height="16" border="0" alt="" src="image/40425487.png">&nbsp;<strong>John F. Kennedy</strong></p>
+                </td>
+                <td>
+                    <p align="center">&nbsp;$60</p>
+                </td>
+                <td>
+                    <p align="center">$75</p>
+                </td>
+                <td>
+                    <p align="center">&nbsp;$125</p>
+                </td>
+                <td style="text-align: center;" valign="top">&nbsp;$170</td>
+                <td style="text-align: center;" valign="top"><a target="_self" href="http://www.regalcar.com/onlinereservations.html?restabs=2"><img title="" width="26" height="26" border="0" alt="" src="image/40425977.png"></a></td>
+            </tr>
+            <tr>
+                <td style="background-color: #f1f1f1;">
+                    <p align="center"><strong><img title="" width="29" height="16" border="0" alt="" src="image/40425487.png">&nbsp;Newark</strong></p>
+                </td>
+                <td>
+                    <p align="center">&nbsp;$65</p>
+                </td>
+                <td>
+                    <p align="center">$80&nbsp;</p>
+                </td>
+                <td>
+                    <p align="center">&nbsp;$125</p>
+                </td>
+                <td style="text-align: center;" valign="top">&nbsp;$170</td>
+                <td style="text-align: center;" valign="top"><a target="_self" href="http://www.regalcar.com/onlinereservations.html?restabs=2"><img title="" width="26" height="26" border="0" alt="" src="image/40425977.png"></a></td>
+            </tr>
+            <tr>
+                <td style="background-color: #f1f1f1;">
+                    <p align="center"><img title="" width="29" height="16" border="0" alt="" src="image/40425487.png">&nbsp;<strong>Teterboro</strong></p>
+                </td>
+                <td>
+                    <p align="center">$80</p>
+                </td>
+                <td>
+                    <p align="center">$90</p>
+                </td>
+                <td>
+                    <p align="center">&nbsp;$150</p>
+                </td>
+                <td style="text-align: center;" valign="top">&nbsp;$190</td>
+                <td style="text-align: center;" valign="top"><a target="_self" href="http://www.regalcar.com/onlinereservations.html?restabs=2"><img title="" width="26" height="26" border="0" alt="" src="image/40425977.png"></a></td>
+            </tr>
+            <tr>
+                <td style="background-color: #f1f1f1;">
+                    <p align="center"><strong><img title="" width="29" height="16" border="0" alt="" src="image/40425487.png">&nbsp;Whiteplains</strong></p>
+                </td>
+                <td>
+                    <p align="center">&nbsp;$90</p>
+                </td>
+                <td>
+                    <p align="center">$100&nbsp;</p>
+                </td>
+                <td>
+                    <p align="center">&nbsp;$150</p>
+                </td>
+                <td>
+                    <p align="center">&nbsp;$190</p>
+                </td>
+                <td style="text-align: center;" valign="top"><a target="_self" href="http://www.regalcar.com/onlinereservations.html?restabs=2"><img title="" width="26" height="26" border="0" alt="" src="image/40425977.png"></a></td>
+            </tr>
+            <tr valign="middle" lang="undefined">
+                <td style="background-color: #f1f1f1;">
+                    <p align="center"><img title="" width="28" height="28" border="0" alt="" src="image/40425502.png">&nbsp;<strong>Point to Point<br>Transfers&nbsp;in Manhattan</strong></p>
+                </td>
+                <td>
+                    <p style="text-align: center;">&nbsp;$40</p>
+                </td>
+                <td>
+                    <p align="center">$50&nbsp;</p>
+                </td>
+                <td>
+                    <p align="center">$75&nbsp;</p>
+                </td>
+                <td style="text-align: center;" valign="middle">
+                    <p>N/A<br><font size="1"> (See Hourly) </font></p>
+                </td>
+                <td style="text-align: center;" valign="middle"><a target="_self" href="http://www.regalcar.com/onlinereservations.html?restabs=2"><img title="" width="26" height="26" border="0" alt="" src="image/40425977.png"></a></td>
+            </tr>
+            <tr valign="middle" lang="undefined">
+                <td style="background-color: #f1f1f1;">
+                    <p align="center"><img title="" width="28" height="28" border="0" alt="" src="image/40425502.png">&nbsp;<strong>Hourly Rate within <br>Manhattan<br></strong></p>
+                </td>
+                <td>
+                    <p style="text-align: center;">&nbsp;$40/hr<br> @2hrs min&nbsp;</p>
+                </td>
+                <td>
+                    <p align="center">$50/hr<br> @2hrs min&nbsp;</p>
+                </td>
+                <td>
+                    <p align="center">$75/hr<br>@2hrs min&nbsp;</p>
+                </td>
+                <td style="text-align: center;" valign="middle">
+                    <p>$95/hr<br> @2hrs min</p>
+                </td>
+                <td style="text-align: center;" valign="middle"><a target="_self" href="http://www.regalcar.com/onlinereservations.html?restabs=2"><img title="" width="26" height="26" border="0" alt="" src="image/40425977.png"></a></td>
+            </tr>
+            <tr valign="middle" lang="undefined">
+                <td style="background-color: #f1f1f1;">
+                    <p align="center"><img title="" width="28" height="28" border="0" alt="" src="image/40425502.png">&nbsp;<strong>Hourly Rate within <br> the Other&nbsp;Boroughs</strong></p>
+                </td>
+                <td>
+                    <p style="text-align: center;">&nbsp;$45/hr<br> @2hrs min&nbsp;</p>
+                </td>
+                <td>
+                    <p align="center">$55/hr<br> @2hrs min&nbsp;</p>
+                </td>
+                <td>
+                    <p align="center">$80/hr<br>@2hrs min&nbsp;</p>
+                </td>
+                <td style="text-align: center;" valign="middle">
+                    <p>$100/hr<br> @2hrs min</p>
+                </td>
+                <td style="text-align: center;" valign="middle"><a target="_self" href="http://www.regalcar.com/onlinereservations.html?restabs=2"><img title="" width="26" height="26" border="0" alt="" src="image/40425977.png"></a></td>
+            </tr>
+            <tr valign="middle" lang="undefined">
+                <td style="background-color: #f1f1f1;">
+                    <p align="center"><img title="" width="28" height="28" border="0" alt="" src="image/40425502.png">&nbsp;<strong>Hourly Rate outside&nbsp;<br> the Five Boroughs</strong></p>
+                </td>
+                <td>
+                    <p style="text-align: center;">&nbsp;$55/hr<br> @2hrs min&nbsp;</p>
+                </td>
+                <td>
+                    <p align="center">$65/hr&nbsp;<br> @2hrs min&nbsp;</p>
+                </td>
+                <td>
+                    <p align="center">$90/hr<br>@2hrs min&nbsp;</p>
+                </td>
+                <td style="text-align: center;" valign="middle">
+                    <p>$110/hr<br> @2hrs min</p>
+                </td>
+                <td style="text-align: center;" valign="middle"><a target="_self" href="http://www.regalcar.com/onlinereservations.html?restabs=2"><img title="" width="26" height="26" border="0" alt="" src="image/40425977.png"></a></td>
+            </tr>
+            <tr align="center" valign="middle" lang="undefined">
+                <td style="background-color: #f1f1f1;">
+                    <p align="center"><strong><i><img title="" width="28" height="28" border="0" alt="" src="image/40425502.png">Out of Town <br>(up to 10 mi.)</i></strong></p>
+                </td>
+                <td valign="middle">
+                    <p align="center">$65 min.</p>
+                </td>
+                <td valign="middle">
+                    <p align="center">$75 min.</p>
+                </td>
+                <td>
+                    <p align="center">$85 min.</p>
+                </td>
+                <td style="text-align: center;" valign="middle">
+                    <p style="margin-top: 0px; margin-bottom: 0px; text-align: center;">$170 min.</p>
+                </td>
+                <td style="text-align: center;" valign="middle"><a target="_self" href="http://www.regalcar.com/onlinereservations.html?restabs=2"><img title="" width="26" height="26" border="0" alt="" src="image/40425977.png"></a></td>
+            </tr>
+            <tr align="center" valign="middle" lang="undefined">
+                <td style="background-color: #f1f1f1; text-align: center;" valign="top"><i><img width="28" title="" style="border: 0px initial initial;" src="image/40425502.png" height="28" border="0" alt=""><span style="font-style: normal;"><strong>Out of Town <br>(beyond 10 mi.)</strong></span></i></td>
+                <td style="text-align: center;" valign="middle">+$2.50/mi.</td>
+                <td style="text-align: center;" valign="middle">+$2.75/mi.</td>
+                <td style="text-align: center;" valign="middle">+$4.50/mi.</td>
+                <td style="text-align: center;" valign="middle">+$4.50/mi.</td>
+                <td style="text-align: center;" valign="middle"><a target="_self" href="http://www.regalcar.com/onlinereservations.html?restabs=2"><img title="" width="26" height="26" border="0" alt="" src="image/40425977.png"></a></td>
+            </tr>
+            <tr>
+                <td colspan="6" width="600px">
+                    <p style="color: #114268; font-size: 13px;"><span style="font-size: 16px; color: #f00;"><strong>Please note&nbsp;</strong>that service charges, tolls and any applicable taxes and/or optional airport parking fees are not included in prices shown above. If an inside "meet and greet" is requested at the airports, there will be an additional fee of $10.</span></p>
+                    <p><font size="3" color="#ff0000">* There is a $15 charge per every requested child safety seat.</font></p>
+                    <p style="font-weight: normal;"><span style="font-size: 16px; color: #f00;">* A Cadillac Escalade is a premium SUV and subject to an hourly rate of $90/hour (@2hrs min) if specifically requested.&nbsp;</span></p>
+
+                </td>
+            </tr>
+            </tbody>
+
+        </table>
+
+
+    </template>
+
+</dom-module>
+
+<script>
+    Polymer({
+
+        is: "rate-table"
+
+    });
+
+
+
+</script>
+
+
+
+
