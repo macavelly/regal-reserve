@@ -1,0 +1,47 @@
+<link rel="import"  href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/paper-tabs/paper-tabs.html">
+<link rel="import" href="../bower_components/iron-pages/iron-pages.html">
+<link rel="import" href="../bower_components/paper-styles/typography.html">
+
+<dom-module id="rate-reserve">
+
+    <style>
+        paper-tabs {
+            background-color: #0d47a1;
+            color: #fff;
+            --paper-font-common-base: Roboto;
+        }
+        iron-pages {
+            background-color: #BDBDBD;
+        }
+    </style>
+
+    <template>
+        <paper-tabs selected="{{selected}}">
+            <paper-tab>RATES</paper-tab>
+            <paper-tab>REQUEST A QUOTE</paper-tab>
+            <paper-tab>MAKE A RESERVATION</paper-tab>
+        </paper-tabs>
+
+        <iron-pages selected="{{selected}}">
+            <div>Page 1</div>
+            <div>Page 2</div>
+            <div>Page 3</div>
+        </iron-pages>
+
+
+
+    </template>
+
+</dom-module>
+
+<script>
+    Polymer({
+
+        is: "rate-reserve"
+
+    });
+
+
+
+</script>
